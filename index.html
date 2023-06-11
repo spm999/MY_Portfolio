@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/png">
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+  <title>Surya's Portfolio</title>
+</head>
+
+<body>
+  <div class="container">
+    <header id="main-header">
+      <div class="row no-gutters">
+        <div class="col-md-5 col-lg-4">
+          <img src="img/SuryaPrakash.jpg" alt="Surya Prakash" />
+        </div>
+
+        <div class="col-md-7 col-lg-8">
+          <div class="d-flex flex-column">
+            <div class="text-white bg-dark p-5">
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <h1 class="display-4">Surya Prakash</h1>
+                <a href="https://github.com/Spm999" class="text-white" target="_blank">
+                  <i class="fab fa-github" id="github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/spm999/" class="text-white" target="_blank">
+                  <i class="fab fa-linkedin" id="linkedin"></i>
+                </a>
+                <a href="https://twitter.com/suryap_999_1" class="text-white" target="_blank">
+                  <i class="fab fa-twitter" id="twitter"></i>
+                </a>
+              </div>
+            </div>
+            <nav>
+              <ul class="d-flex flex-row align-items-stretch list-unstyled mb-0">
+                <p class="lead text-white bg-super-dark p-4 mb-0" style="width: 100%;text-align:center;">Passionate
+                  programmer & ML Enthusiast</p>
+                <li class="lead text-white bg-super-dark p-4 mb-0" style="width: 100%;text-align:center;">
+                  <a href="pdf/resume.pdf" style="text-decoration: none;color: aliceblue;" id="resume">My Resume</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="text-white text-center">
+              <ul class="d-flex flex-row align-items-stretch list-unstyled mb-0">
+                <li class="portfolio-item bg-primary p-4" data-toggle="collapse" data-target="#experience">
+                  <i class="fas fa-home fa-2x"></i>
+                  <span class="d-none d-sm-block">Experience</span>
+                </li>
+                <li class="portfolio-item bg-success p-4" data-toggle="collapse" data-target="#skills">
+                  <i class="fas fa-graduation-cap fa-2x"></i>
+                  <span class="d-none d-sm-block">Skills</span>
+                </li>
+                <li class="portfolio-item bg-warning p-4" data-toggle="collapse" data-target="#projects">
+                  <i class="fas fa-folder-open fa-2x"></i>
+                  <span class="d-none d-sm-block">Projects</span>
+                </li>
+                <li class="portfolio-item bg-danger p-4" data-toggle="collapse" data-target="#contact">
+                  <i class="fas fa-envelope fa-2x"></i>
+                  <span class="d-none d-sm-block">Contact</span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Skills COLLAPSE -->
+    <div id="skills" class="collapse show">
+      <div class="card card-body text-white bg-success p-5">
+        <h2>Technologies, I have worked with!</h2>
+      </div>
+
+      <div class="card card-body p-5">
+        <h3>These are my skills.🙂</h3>
+        <hr>
+
+        <div class="skills-box">
+          <div class="skill">
+            <div class="skill-language">JavaScript</div>
+            <div class="skill-level">Imtermediate</div>
+          </div>
+          <div class="skill">
+            <div class="skill-language">Python</div>
+            <div class="skill-level">Advance</div>
+          </div>
+          <div class="skill">
+            <div class="skill-language">MySQL</div>
+            <div class="skill-level">Advance</div>
+          </div>
+          <div class="skill">
+            <div class="skill-language">GIT</div>
+            <div class="skill-level">Advanced</div>
+          </div>
+          <div class="skill">
+            <div class="skill-language">Firebase</div>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill">
+            <div class="skill-language">React</div>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill">
+            <div class="skill-language">Django</div>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill">
+            <div class="skill-language">HTML</div>
+            <div class="skill-level">Advance</div>
+          </div>
+          <!-- <div class="skill" onclick="openPopup('html')">
+            <div class="skill-language">HTML</div>
+            <div class="skill-level">Advance</div>
+          </div> -->
+        </div>
+
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="certificate-title"></h2>
+            <p id="certificate-description"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Experience COLLAPSE -->
+    <div id="experience" class="collapse">
+      <div class="card card-body text-white bg-primary p-5">
+        <h3>My Work Experiences</h3>
+      </div>
+      <div class="card card-body p-5">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title" style="text-align: center;">Cognizant</h4>
+              <img src="img/Cognizant.jpg" alt="Cognizant LOGO" style=" width: 100%;
+              height: autopx;">
+              <p class="text-white bg-dark mb-3 p-2">
+                Programmer Analyst
+              </p>
+              <li>Involved in high-level design, handling technical designs and complex application features.</li>
+              <li>Worked on [Food Delivery Website] using [ReactJs]</li>
+              <li>Performed key role in the development process of the UI portion of the web application.</li>
+
+            </div>
+            <div class="card-footer">
+              <h6 class="text-muted"> Feb 2022-Jul 2022</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects COLLAPSE -->
+    <div id="projects" class="collapse">
+      <div class="card card-body text-white bg-warning p-5">
+        <h2>My few projects</h2>
+      </div>
+
+      <div class="card card-body p-5">
+        <div class="row no-gutters">
+          <div class="project-box">
+            <h2>Kid Friendly</h2>
+            <a href="https://github.com/spm999/kidfriendly">View Project</a>
+          </div>
+
+          <div class="project-box">
+            <h2>Edulearn</h2>
+            <a href="https://github.com/spm999/Edulearn">View Project</a>
+          </div>
+
+          <div class="project-box">
+            <h2>Small Projects</h2>
+            <a href="https://github.com/spm999/js_s_projects">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT COLLAPSE -->
+    <div id="contact" class="collapse">
+      <div class="card card-body text-white bg-danger py-5">
+        <h2>Want to contact me?</h2>
+      </div>
+      <div class="card card-body py-5">
+        <form id="form_contact">
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text text-white bg-danger">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control text-white bg-dark" placeholder="Name" name="name" id="name"
+                required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text text-white bg-danger">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+              <input type="email" class="form-control text-white bg-dark" placeholder="Email" name="email" id="email"
+                required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text text-white bg-danger">
+                  <i class="fas fa-pencil-alt"></i>
+                </span>
+              </div>
+              <textarea class="form-control text-white bg-dark" placeholder="Message" name="message" id="message"
+                required></textarea>
+            </div>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-block btn-lg btn-danger" id="submit" />
+
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="text-white bg-dark p-4">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+          <a class="btn btn-outline-light" id="footer">Made by Surya Prakash 🙂</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js">
+  </script>
+  <script src="main.js"></script>
+  <script src="contact.js"></script>
+</body>
+
+</html>
