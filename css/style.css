@@ -4,7 +4,7 @@
 }
 
 #main-header .portfolio-item {
-	min-width: 25%;
+	min-width: 20%;
 }
 
 #main-header .portfolio-item:hover {
@@ -136,4 +136,150 @@ a:hover i {
 	margin: 10px;
 	display: inline-block;
 	box-sizing: border-box;
+	text-align: center;
 }
+
+.project-box:hover{
+	background-color: #ff8ecc;
+	border: 1px solid black;
+	color: #000000;
+
+	transform: scale(1.05); /* Increase the size on hover */
+	transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+.project-box a{
+	text-decoration: none;
+	/* color: aliceblue; */
+	}
+
+
+.project-box1 {
+	width: 300px;
+	height: 200px;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+/* .project-box1 a{
+	display: inline-block;
+	padding: 6px 20px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+} */
+
+.project-box1 a {
+	margin-top: 30px;
+	display: inline-block;
+	padding: 6px 20px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow property for animation */
+  }
+  
+  .project-box1 a:hover {
+	background-color: #0056b3; /* Change background color on hover */
+	transform: scale(1.05) rotate(5deg); /* Scale up slightly and rotate a bit on hover */
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  } 
+
+
+
+
+
+.project-box1:hover{
+	background-color: #ff8ecc;
+	border: 1px solid black;
+	color: #000000;
+
+	transform: scale(1.05); /* Increase the size on hover */
+	transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.project-box1 a{
+text-decoration: none;
+/* color: aliceblue; */
+}
+
+.skill:hover {
+	background-color: #ff8ecc;
+	border: 1px solid black;
+	color: #000000;
+
+	transform: scale(1.05); /* Increase the size on hover */
+	transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.skill:hover .skill-level {
+	color: #000000;
+}
+
+
+
+
+/* Projects section styles */
+#projects {
+	background-color: #f8f8f8;
+  }
+  
+  .project-box {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 15px;
+	margin: 10px 0;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .project-box:hover {
+	transform: scale(1.02);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	background-color: #f0f0f0;
+  }
+  
+  .project-box h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	transition: color 0.3s ease;
+  }
+  
+  .project-box:hover h2 {
+	color: #007bff; /* Change text color on hover */
+  }
+  
+  .project-box a {
+	display: block;
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transform: translateY(100%);
+	opacity: 0;
+  }
+  
+  .project-box:hover a {
+	background-color: #ffc107	;
+	transform: translateY(0);
+	opacity: 1;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
