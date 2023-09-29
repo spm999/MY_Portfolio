@@ -10,11 +10,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/favicon.ico" type="image/png">
   <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
   <title>Surya's Portfolio</title>
+  <script src="https://code.iconify.design/iconify-icon-font.min.js"></script>
+
 </head>
 
 <body>
@@ -29,7 +32,7 @@
           <div class="d-flex flex-column">
             <div class="text-white bg-dark p-5">
               <div class="d-flex flex-row justify-content-between align-items-center">
-                <h1 class="display-4">Surya Prakash</h1>
+                <h1 class="display-4">Surya Prakash Maurya</h1>
                 <a href="https://github.com/Spm999" class="text-white" target="_blank">
                   <i class="fab fa-github" id="github"></i>
                 </a>
@@ -43,11 +46,18 @@
             </div>
             <nav>
               <ul class="d-flex flex-row align-items-stretch list-unstyled mb-0">
-                <p class="lead text-white bg-super-dark p-4 mb-0" style="width: 100%;text-align:center;">Passionate
-                  programmer & ML Enthusiast</p>
+
+
+                <li class="mm">
+                  <p class="lead text-white bg-super-dark p-4 mb-0" style="width: 100%;text-align:center;">Passionate
+                    programmer & ML Enthusiast
+                  </p>
+                </li>
                 <li class="lead text-white bg-super-dark p-4 mb-0" style="width: 100%;text-align:center;">
                   <a href="pdf/resume.pdf" style="text-decoration: none;color: aliceblue;" id="resume">My Resume</a>
                 </li>
+
+
               </ul>
             </nav>
 
@@ -69,8 +79,16 @@
                   <i class="fas fa-envelope fa-2x"></i>
                   <span class="d-none d-sm-block">Contact</span>
                 </li>
+                <li class="portfolio-item bg-info p-4" data-toggle="collapse" data-target="#weblinks">
+                  <i class="fas fa-link fa-2x"></i>
+                  <span class="d-none d-sm-block">Coding Profiles</span>
+                </li>
+
               </ul>
+
             </nav>
+
+
           </div>
         </div>
       </div>
@@ -88,37 +106,70 @@
 
         <div class="skills-box">
           <div class="skill">
-            <div class="skill-language">JavaScript</div>
-            <div class="skill-level">Imtermediate</div>
+            <!-- <div class="skill-language">JavaScript</div> -->
+            <div class="skill-level">Intermediate</div>
+            <p><i class="fab fa-js fa-5x"></i> JavaScript</p>
           </div>
           <div class="skill">
-            <div class="skill-language">Python</div>
+            <!-- <div class="skill-language">Python</div> -->
             <div class="skill-level">Advance</div>
+            <p><i class="fab fa-python fa-5x colorful-icon"></i> Python</p>
+
           </div>
           <div class="skill">
-            <div class="skill-language">MySQL</div>
+            <!-- <div class="skill-language">MySQL</div> -->
             <div class="skill-level">Advance</div>
+            <p><i class="fas fa-database fa-5x"></i> MySQL</p>
+
           </div>
           <div class="skill">
-            <div class="skill-language">GIT</div>
+            <!-- <div class="skill-language">GIT</div> -->
             <div class="skill-level">Advanced</div>
+            <p><i class="fab fa-git fa-5x"></i> Git</p>
+
           </div>
           <div class="skill">
-            <div class="skill-language">Firebase</div>
+            <!-- <div class="skill-language">Firebase</div> -->
             <div class="skill-level">Intermediate</div>
+            <p><i class="fas fa-fire fa-5x"></i> Firebase</p>
+
+
           </div>
           <div class="skill">
-            <div class="skill-language">React</div>
+            <!-- <div class="skill-language">React</div> -->
             <div class="skill-level">Intermediate</div>
+            <p><i class="fab fa-react fa-5x"></i> React</p>
+
           </div>
           <div class="skill">
-            <div class="skill-language">Django</div>
+            <!-- <div class="skill-language">Django</div> -->
             <div class="skill-level">Intermediate</div>
+            <p>
+
+              <i class='fab fa-java' style='font-size:84px'></i>
+
+              
+              Java</p>
+
           </div>
           <div class="skill">
-            <div class="skill-language">HTML</div>
+            <!-- <div class="skill-language">HTML</div> -->
             <div class="skill-level">Advance</div>
+            <p><i class="fab fa-html5 fa-5x"></i> HTML</p>
+
           </div>
+          <div class="skill">
+            <!-- <div class="skill-language">HTML</div> -->
+            <div class="skill-level">Advance</div>
+            <p><i class="fab fa-node fa-5x"></i> Node.js</p>
+          </div>
+          <div class="skill">
+            <!-- <div class="skill-language">HTML</div> -->
+            <div class="skill-level">Advance</div>
+            <p><i class="fab fa-cuttlefish fa-5x cpp-icon"></i> C++</p>
+
+          </div>
+
           <!-- <div class="skill" onclick="openPopup('html')">
             <div class="skill-language">HTML</div>
             <div class="skill-level">Advance</div>
@@ -149,7 +200,7 @@
               <img src="img/Cognizant.jpg" alt="Cognizant LOGO" style=" width: 100%;
               height: autopx;">
               <p class="text-white bg-dark mb-3 p-2">
-                Programmer Analyst
+                Programmer Analyst Trainee
               </p>
               <li>Involved in high-level design, handling technical designs and complex application features.</li>
               <li>Worked on [Food Delivery Website] using [ReactJs]</li>
@@ -172,27 +223,57 @@
 
       <div class="card card-body p-5">
         <div class="row no-gutters">
+
           <div class="project-box">
             <h2>Kid Friendly</h2>
-            <a href="https://github.com/spm999/kidfriendly">View Project</a>
+            <a href="https://github.com/spm999/kidfriendly" target="_blank">View Project</a>
           </div>
 
           <div class="project-box">
-            <h2>Edulearn</h2>
-            <a href="https://github.com/spm999/Edulearn">View Project</a>
+            <h2>React Dashboard</h2>
+            <a href="https://github.com/spm999/React_dashboard" target="_blank">View Project</a>
           </div>
 
-          <div class="project-box">
-            <h2>Small Projects</h2>
-            <a href="https://github.com/spm999/js_s_projects">View Project</a>
-          </div>
-          
           <div class="project-box">
             <h2>Restaurant</h2>
-            <a href="https://spm999.github.io/Spmhot_Restaurant/">View Project</a>
+            <a href="https://spm999.github.io/Spmhot_Restaurant/" target="_blank">View Project</a>
+          </div>
+          <div class="project-box">
+            <h2>Car Booking</h2>
+            <a href="https://github.com/spm999/Car_booking_php_Mysql" target="_blank">View Project</a>
+          </div>
+          <div class="project-box">
+            <h2>Small Projects</h2>
+            <a href="https://github.com/spm999/js_s_projects" target="_blank">View Project</a>
           </div>
 
-          
+        </div>
+      </div>
+
+    </div>
+
+    <!--weblinks (coding profile)-->
+    <div id="weblinks" class="collapse">
+      <div class="card card-body text-white bg-info p-5">
+        <h2>My Coding Profiles</h2>
+      </div>
+
+      <div class="card card-body p-5">
+        <div class="row no-gutters">
+          <div class="project-box1">
+            <h2>Leetcode</h2>
+            <a href="https://leetcode.com/spm999" target="_blank">Visit Profile</a>
+          </div>
+
+          <div class="project-box1">
+            <h2>Hackerrank</h2>
+            <a href="https://www.hackerrank.com/spm999" target="_blank">Visit Profile</a>
+          </div>
+
+          <div class="project-box1">
+            <h2>Codechef</h2>
+            <a href="https://www.codechef.com/users/rsurya000t" target="_blank">Visit Profile</a>
+          </div>
         </div>
       </div>
     </div>
@@ -254,7 +335,7 @@
       </div>
     </footer>
   </div>
-  </div>
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
